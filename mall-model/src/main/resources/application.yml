@@ -1,0 +1,31 @@
+logging:
+  config: classpath:log4j.xml
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/mall?useSSL=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: cjf1226098687.
+#  redis:
+#    database: 0
+#    host: 47.104.166.117
+#    port: 6379
+#    lettuce:
+#      pool:
+#        max-active: 8
+#        max-idle: 8
+#        min-idle: 0
+# mybatis二级缓存
+mybatis:
+  mapper-locations: classpath:com/qfedu/mapper/*.xml
+  configuration:
+    cache-enabled: true
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+
+server:
+  port: 8080
